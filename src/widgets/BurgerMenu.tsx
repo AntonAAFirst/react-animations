@@ -1,23 +1,15 @@
-import { BurgerMenuProps } from "../shared/models/props/BurgerMenuProps";
 import {
   BurgerMenuCloseArea,
   BurgerMenuContainer,
-  BurgerMenuItemContainer,
-  BurgerMenuItemPrimaryText,
-  BurgerMenuItemSecondaryText,
   BurgerMenuList,
   BurgerMenuPanel,
   BurgerMenuPhoneNumber,
   Cross,
 } from "../shared/styles/BurgerMenuStyles";
-import "../pages/styles.css";
 import { useAppDispatch, useAppSelector } from "../shared/store/hooks";
-import {
-  closeBurgerMenu,
-  openBurgerMenu,
-} from "../shared/store/reducers/BurgerMenuReducer";
-import { useState } from "react";
+import { closeBurgerMenu } from "../shared/store/reducers/BurgerMenuReducer";
 import BurgerMenuItem from "./BurgerMenuItem";
+import "../pages/styles.css";
 
 export default function BurgerMenu() {
   const active = useAppSelector((state) => state.burgerMenu.burgerActive);

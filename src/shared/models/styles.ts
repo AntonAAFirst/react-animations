@@ -9,3 +9,15 @@ export interface ButtonGoHoverStyledProps {
 export interface BurgerMenuStyledProps {
   active: boolean;
 }
+
+export interface SpeedometerLevelButtonStyledProps {
+  active: boolean;
+  color: string;
+  index: number;
+}
+
+export interface SpeedometerItemStyledProps {
+  top: number;
+  left: number;
+  imageString: string;
+}

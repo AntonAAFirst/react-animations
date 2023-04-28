@@ -11,6 +11,9 @@ import {
   UpWave,
 } from "../shared/styles/SimpleElementsStyles";
 import MenuButton from "../shared/UI/MenuButton";
+import slider1Icon from "../shared/images/slider/slider1.png";
+import slider2Icon from "../shared/images/slider/slider2.png";
+import slider3Icon from "../shared/images/slider/slider3.png";
 
 export default function RightPage() {
   const [backButtonActive, setBackButtonActive] = useState<boolean>(false);
