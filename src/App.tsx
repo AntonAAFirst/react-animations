@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./pages/styles.css";
+import LeftPage from "./pages/LeftPage";
+import RightPage from "./pages/RightPage";
+import { useState } from "react";
+import BurgerMenu from "./widgets/BurgerMenu";
+import { relative } from "path";
+import { useAppDispatch, useAppSelector } from "./shared/store/hooks";
+import { useDispatch } from "react-redux";
+import {
+  closeBurgerMenu,
+  openBurgerMenu,
+} from "./shared/store/reducers/BurgerMenuReducer";
 
-function App() {
+export default function App() {
+  const burgerMenuActive = useAppSelector(
+    (state) => state.burgerMenu.burgerActive
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ overflow: "hidden" }}>
+      <LeftPage />
+      <RightPage />
+      <BurgerMenu />
     </div>
   );
 }
-
-export default App;
