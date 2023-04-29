@@ -1,5 +1,4 @@
 import {
-  BurgerMenuCloseArea,
   BurgerMenuContainer,
   BurgerMenuList,
   BurgerMenuPanel,
@@ -22,16 +21,21 @@ export default function BurgerMenu() {
 
   return (
     <>
-      <BurgerMenuCloseArea onClick={closeBurger} />
-      <BurgerMenuContainer onClick={closeBurger} active={active} />
+      <BurgerMenuContainer
+        onClick={closeBurger}
+        active={active}
+      ></BurgerMenuContainer>
       <BurgerMenuPanel onClick={(e) => e.stopPropagation()} active={active} />
-      <BurgerMenuPhoneNumber active={active} />
-      <BurgerMenuList>
+      <BurgerMenuList onClick={(e) => e.stopPropagation()}>
         <BurgerMenuItem index={1} />
         <BurgerMenuItem index={2} />
         <BurgerMenuItem index={3} />
         <BurgerMenuItem index={4} />
       </BurgerMenuList>
+      <BurgerMenuPhoneNumber
+        onClick={(e) => e.stopPropagation()}
+        active={active}
+      />
       <Cross onClick={closeBurger} active={active} />
     </>
   );

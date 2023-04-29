@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import sliderBackground from "../images/slider/sliderBackground.png";
+import styled from "styled-components";
 
 export const SliderContainer = styled.div`
   background: url(${sliderBackground});
@@ -23,8 +23,7 @@ export const SliderBackButton = styled.div`
   top: 624px;
   left: 851px;
   cursor: pointer;
-  z-index: 3000;
-  z-index: 50000;
+  z-index: 1000;
 `;
 
 export const SliderForwardButton = styled.div`
@@ -37,7 +36,7 @@ export const SliderForwardButton = styled.div`
   top: 624px;
   left: 949px;
   cursor: pointer;
-  z-index: 50000;
+  z-index: 1000;
   }
 `;
 
@@ -45,7 +44,7 @@ interface BlockProps {
   degreePX: string;
 }
 
-export const Block = styled.div<BlockProps>`
+export const SliderImages = styled.div<BlockProps>`
   transition: 0.45s;
   top: 170px;
   position: absolute;
@@ -56,12 +55,12 @@ export const Block = styled.div<BlockProps>`
   height: 1500px;
 `;
 
-export const BlockImgFirst = styled.img`
+export const SliderImgFirst = styled.img`
   width: 500px;
   height: 500px;
 `;
 
-export const BlockImgSecond = styled.img`
+export const SliderImgSecond = styled.img`
   transform: rotate(90deg);
   width: 500px;
   height: 500px;
@@ -69,7 +68,7 @@ export const BlockImgSecond = styled.img`
   left: 1000px;
 `;
 
-export const BlockImgThird = styled.img`
+export const SliderImgThird = styled.img`
   width: 500px;
   height: 500px;
   position: absolute;

@@ -1,11 +1,11 @@
 import {
-  Block,
-  BlockImgFirst,
-  BlockImgSecond,
-  BlockImgThird,
   SliderBackButton,
   SliderContainer,
   SliderForwardButton,
+  SliderImages,
+  SliderImgFirst,
+  SliderImgSecond,
+  SliderImgThird,
 } from "../shared/styles/SliderStyles";
 import slider1 from "../shared/images/slider/slider1.png";
 import slider2 from "../shared/images/slider/slider2.png";
@@ -43,13 +43,13 @@ export default function SliderBlock() {
   return (
     <>
       <SliderContainer />
-      <SliderBackButton onClick={back} />
-      <SliderForwardButton onClick={forward} />
-      <Block degreePX={`${deg}deg`}>
-        <BlockImgFirst src={slider1} />
-        <BlockImgSecond src={slider2} />
-        <BlockImgThird src={slider3} />
-      </Block>
+      <SliderBackButton onClick={forward} />
+      <SliderForwardButton onClick={back} />
+      <SliderImages degreePX={`${deg}deg`}>
+        <SliderImgFirst src={slider1} />
+        <SliderImgSecond src={slider2} />
+        <SliderImgThird src={slider3} />
+      </SliderImages>
     </>
   );
 }

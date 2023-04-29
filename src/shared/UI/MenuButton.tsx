@@ -8,12 +8,13 @@ import {
 export default function MenuButton() {
   const dispatch = useAppDispatch();
 
-  function openBurger() {
-    dispatch(openBurgerMenu());
-  }
-
   return (
-    <MenuButtonContainer onClick={openBurger}>
+    <MenuButtonContainer
+      onClick={(e) => {
+        dispatch(openBurgerMenu());
+        e.stopPropagation();
+      }}
+    >
       <MenuButtonItem />
       <MenuButtonItem />
       <MenuButtonItem />

@@ -10,6 +10,7 @@ import {
 import MenuButton from "../shared/UI/MenuButton";
 import SliderBlock from "../widgets/SliderBlock";
 import RightPageText from "../widgets/RightPageText";
+import { RightPageContainer } from "../shared/styles/Layout";
 
 export default function RightPage() {
   function scrollToLeft() {
@@ -17,15 +18,15 @@ export default function RightPage() {
   }
 
   return (
-    <div className="second">
+    <RightPageContainer>
       <UpWave src={rightUpWave} />
       <BackButton onClick={scrollToLeft}>
-        <BackButtonHoverColor onClick={scrollToLeft} />
+        <BackButtonHoverColor />
       </BackButton>
       <SliderBlock />
       <MenuButton />
       <RightPageText />
       <BottomWave src={rightBottomWave} />
-    </div>
+    </RightPageContainer>
   );
 }

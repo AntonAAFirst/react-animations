@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { BurgerMenuStyledProps } from "../models/styles";
+import styled from "styled-components";
 
 export const BurgerMenuContainer = styled.div<BurgerMenuStyledProps>`
   height: 100vh;
@@ -7,6 +7,7 @@ export const BurgerMenuContainer = styled.div<BurgerMenuStyledProps>`
   z-index: 2000;
   position: fixed;
   transform: scale(${(props) => (props.active ? 1 : 0)});
+  border: 2px solid orange;
 `;
 
 export const BurgerMenuPanel = styled.div<BurgerMenuStyledProps>`
@@ -14,25 +15,17 @@ export const BurgerMenuPanel = styled.div<BurgerMenuStyledProps>`
   height: 900px;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 10200;
   transition: 1s;
   background-color: rgba(9, 9, 9, 1);
   transform: translateX(${(props) => (props.active ? 0 : "-400px")});
-`;
-
-export const BurgerMenuCloseArea = styled.div`
-  height: 100vh;
-  width: 100vw;
-  z-index: 8000;
-  left: 375px;
-  position: fixed;
 `;
 
 export const BurgerMenuPhoneNumber = styled.div<BurgerMenuStyledProps>`
   position: fixed;
   top: 616px;
   left: 70px;
-  z-index: 8000;
+  z-index: 10300;
   color: rgba(255, 255, 255, 1);
   transform: translateX(${(props) => (props.active ? 0 : "-400px")});
   transition: 1s;
@@ -44,7 +37,7 @@ export const BurgerMenuPhoneNumber = styled.div<BurgerMenuStyledProps>`
 `;
 
 export const Cross = styled.div<BurgerMenuStyledProps>`
-  z-index: 2401;
+  z-index: 10300;
   width: 25px;
   height; 25px;
   position: fixed;
@@ -91,8 +84,9 @@ export const BurgerMenuItemContainer = styled.div<BurgerMenuStyledProps>`
   color: rgba(255, 255, 255, 1);
   font-family: Montserrat;
   transition: 1s;
-  z-index: 8000;
+  z-index: 10300;
   transform: translateX(${(props) => (props.active ? 0 : "-400px")});
+  cursor: pointer;
 
   &:hover ${BurgerMenuItemPrimaryText} {
     color: rgba(122, 11, 192, 1);
@@ -100,7 +94,7 @@ export const BurgerMenuItemContainer = styled.div<BurgerMenuStyledProps>`
   }
 
   &:hover ${BurgerMenuItemSecondaryText} {
-    transform: translate(50px);
+    transform: translate(60px);
     font-size: 10px;
   }
 `;
@@ -112,5 +106,6 @@ export const BurgerMenuList = styled.div`
   top: 257px;
   left: 70px;
   gap: 39px;
+  z-index: 10300;
   width: max-content;
 `;
