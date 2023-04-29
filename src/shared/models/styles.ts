@@ -21,3 +21,13 @@ export interface SpeedometerItemStyledProps {
   left: number;
   imageString: string;
 }
+
+export interface SpeedometerCenterStyledProps {
+  color: string;
+}
+
+export interface SpeedometerArrowStyledProps {
+  transformDegree: number;
+  translateX: number;
+  translateY: number;
+}

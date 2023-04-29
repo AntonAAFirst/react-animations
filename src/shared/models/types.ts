@@ -33,6 +33,28 @@ export type IPosition = {
   left: number;
 };
 
+export type ISpeedometerArrow = {
+  degree: number;
+  translateX: number;
+  translateY: number;
+};
+
+export const arrowFirstLevel: ISpeedometerArrow = {
+  degree: 0,
+  translateX: 40,
+  translateY: 15,
+};
+export const arrowSecondLevel: ISpeedometerArrow = {
+  degree: 120,
+  translateX: 45,
+  translateY: 18,
+};
+export const arrowThirdLevel: ISpeedometerArrow = {
+  degree: 242,
+  translateX: 48,
+  translateY: 14,
+};
+
 export const firstLevel: string[] = [
   first1,
   first2,

@@ -16,8 +16,6 @@ import slider2Icon from "../shared/images/slider/slider2.png";
 import slider3Icon from "../shared/images/slider/slider3.png";
 
 export default function RightPage() {
-  const [backButtonActive, setBackButtonActive] = useState<boolean>(false);
-
   function scrollToLeft() {
     window.scrollTo({ left: 0, behavior: "smooth" });
   }
@@ -38,15 +36,8 @@ export default function RightPage() {
         essentially unchanged. It was popularised in the 1960s with the release
         of Letraset sheets containing
       </SecondaryText>
-      <BackButton
-        onClick={scrollToLeft}
-        onMouseEnter={() => setBackButtonActive(true)}
-        onMouseLeave={() => setBackButtonActive(false)}
-      >
-        <BackButtonHoverColor
-          onClick={scrollToLeft}
-          active={backButtonActive}
-        />
+      <BackButton onClick={scrollToLeft}>
+        <BackButtonHoverColor onClick={scrollToLeft} />
       </BackButton>
       <BottomWave src={rightBottomWave} />
     </div>

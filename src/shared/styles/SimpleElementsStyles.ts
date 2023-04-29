@@ -11,21 +11,23 @@ export const BottomWave = styled.img`
   bottom: 0;
 `;
 
-export const ButtonGoDefaultColor = styled.div<ButtonGoHoverStyledProps>`
+export const ButtonGoDefaultColor = styled.div`
   position: absolute;
   background: linear-gradient(
     to right,
     rgba(122, 11, 192, 1),
     rgba(250, 88, 182, 1)
   );
+  z-index: 14;
   transition: 0.8s;
-  opacity: ${(props) => (props.active ? 0 : 1)};
+  opacity: 1;
 `;
 
-export const ButtonGoHoverColor = styled.div<ButtonGoHoverStyledProps>`
+export const ButtonGoHoverColor = styled.div`
   position: absolute;
   transition: 0.8s;
-  opacity: ${(props) => (props.active ? 1 : 0)};
+  opacity: 0;
+  z-index: 15;
   background: linear-gradient(
     to right,
     rgba(122, 11, 192, 1),
@@ -34,7 +36,7 @@ export const ButtonGoHoverColor = styled.div<ButtonGoHoverStyledProps>`
   );
 `;
 
-export const ButtonGoContainer = styled.div<ButtonGoHoverStyledProps>`
+export const ButtonGoContainer = styled.div`
   position: relative;
   top: 582px;
   left: 100px;
@@ -70,6 +72,9 @@ export const ButtonGoContainer = styled.div<ButtonGoHoverStyledProps>`
   &:hover {
     box-shadow: 8px 8px 8px 0px black;
     top: 580px;
+  }
+  &:hover ${ButtonGoHoverColor} {
+    opacity: 1;
   }
 `;
 
@@ -112,14 +117,14 @@ export const MenuButtonItem = styled.div`
   background-color: rgba(255, 255, 255, 1);
 `;
 
-export const BackButtonHoverColor = styled.div<ButtonGoHoverStyledProps>`
+export const BackButtonHoverColor = styled.div`
   position: absolute;
   background: linear-gradient(
     to right,
     rgba(122, 11, 192, 1),
     rgba(250, 88, 182, 1)
   );
-  opacity: ${(props) => (props.active ? 1 : 0)};
+  opacity: 0;
   transition: 0.5s;
 `;
 
@@ -150,5 +155,8 @@ export const BackButton = styled.div`
     z-index: 2;
     left: 120px;
     font-weight: 700;
+  }
+  &:hover ${BackButtonHoverColor} {
+    opacity: 1;
   }
 `;

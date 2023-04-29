@@ -1,11 +1,7 @@
 import leftUpWave from "../shared/images/leftUpWave.png";
 import leftBottomWave from "../shared/images/LeftbottomWave.png";
-import { useState } from "react";
 import {
   BottomWave,
-  ButtonGoContainer,
-  ButtonGoDefaultColor,
-  ButtonGoHoverColor,
   MainText,
   SecondaryText,
   UpWave,
