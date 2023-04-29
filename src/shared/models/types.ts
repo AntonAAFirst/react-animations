@@ -51,8 +51,8 @@ export const arrowSecondLevel: ISpeedometerArrow = {
 };
 export const arrowThirdLevel: ISpeedometerArrow = {
   degree: 242,
-  translateX: 48,
-  translateY: 14,
+  translateX: 44,
+  translateY: 10,
 };
 
 export const firstLevel: string[] = [
@@ -102,3 +102,8 @@ export const coordinates: IPosition[] = [
   { top: 55, left: 27 },
   { top: 14, left: 85 },
 ];
+
+export enum SliderSides {
+  LeftSide,
+  RightSide,
+}

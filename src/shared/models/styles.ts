@@ -1,3 +1,5 @@
+import { SliderSides } from "./types";
+
 export interface TextStyledProps {
   top: number;
 }
@@ -30,4 +32,8 @@ export interface SpeedometerArrowStyledProps {
   transformDegree: number;
   translateX: number;
   translateY: number;
+}
+
+export interface SliderImageStyledProps {
+  animationType: SliderSides;
 }
