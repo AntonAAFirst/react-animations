@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { TextStyledProps } from "../models/styles";
+import styled from "styled-components";
 
 export const UpWave = styled.img`
   position: absolute;

@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import ellipse from "../images/speedometer/ellipse.png";
-import arrow from "../images/arrow.png";
 import {
   SpeedometerArrowStyledProps,
   SpeedometerCenterStyledProps,
   SpeedometerItemStyledProps,
   SpeedometerLevelButtonStyledProps,
 } from "../models/styles";
+import styled from "styled-components";
+import ellipse from "../images/speedometer/ellipse.png";
+import arrow from "../images/arrow.png";
 
 export const SpeedometerContainer = styled.div`
   width: 350px;

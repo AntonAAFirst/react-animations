@@ -93,8 +93,8 @@ export const BurgerMenuItemContainer = styled.div<BurgerMenuStyledProps>`
   }
 
   &:hover ${BurgerMenuItemSecondaryText} {
-    transform: translate(60px);
-    font-size: 10px;
+    transform: translate(63px);
+    font-size: 12px;
   }
 `;
 
