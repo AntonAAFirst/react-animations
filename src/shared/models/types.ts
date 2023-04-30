@@ -107,8 +107,3 @@ export const coordinates: IPosition[] = [
   { top: 55, left: 27 },
   { top: 14, left: 85 },
 ];
-
-export enum SliderSides {
-  LeftSide,
-  RightSide,
-}

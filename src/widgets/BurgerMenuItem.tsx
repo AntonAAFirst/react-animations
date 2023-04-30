@@ -1,4 +1,4 @@
-import { BurgerMenuItemProps } from "../shared/models/props/BurgerMenuProps";
+import { BurgerMenuItemProps } from "../shared/models/props";
 import { useAppSelector } from "../shared/store/hooks";
 import {
   BurgerMenuItemContainer,

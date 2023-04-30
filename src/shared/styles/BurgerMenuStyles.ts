@@ -7,7 +7,6 @@ export const BurgerMenuContainer = styled.div<BurgerMenuStyledProps>`
   z-index: 2000;
   position: fixed;
   transform: scale(${(props) => (props.active ? 1 : 0)});
-  border: 2px solid orange;
 `;
 
 export const BurgerMenuPanel = styled.div<BurgerMenuStyledProps>`

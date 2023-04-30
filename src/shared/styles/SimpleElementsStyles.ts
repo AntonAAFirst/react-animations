@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonGoHoverStyledProps, TextStyledProps } from "../models/styles";
+import { TextStyledProps } from "../models/styles";
 
 export const UpWave = styled.img`
   position: absolute;
