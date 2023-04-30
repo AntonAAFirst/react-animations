@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const BurgerMenuContainer = styled.div<BurgerMenuStyledProps>`
   height: 100vh;
   width: 100vw;
-  z-index: 2000;
+  z-index: 10100;
   position: fixed;
   transform: scale(${(props) => (props.active ? 1 : 0)});
 `;
