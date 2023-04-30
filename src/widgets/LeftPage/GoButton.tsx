@@ -2,7 +2,7 @@ import {
   ButtonGoContainer,
   ButtonGoDefaultColor,
   ButtonGoHoverColor,
-} from "../shared/styles/SimpleElementsStyles";
+} from "../../shared/styles/SimpleElementsStyles";
 
 export default function GoButton() {
   function scrollToRight() {

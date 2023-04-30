@@ -1,6 +1,5 @@
 import rightUpWave from "../shared/images/rightUpWave.png";
 import rightBottomWave from "../shared/images/rightBottomWave.png";
-import "./styles.css";
 import {
   BackButton,
   BackButtonHoverColor,

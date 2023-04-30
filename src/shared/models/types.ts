@@ -39,6 +39,11 @@ export type ISpeedometerArrow = {
   translateY: number;
 };
 
+export type ISpeedometerButtonSetting = {
+  onClickFunction: Function;
+  color: string;
+};
+
 export const arrowFirstLevel: ISpeedometerArrow = {
   degree: 0,
   translateX: 40,
@@ -79,7 +84,7 @@ export const secondLevel: string[] = [
   second9,
 ];
 
-export const thiddLevel: string[] = [
+export const thirdLevel: string[] = [
   third1,
   third2,
   third3,

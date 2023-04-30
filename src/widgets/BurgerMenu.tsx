@@ -8,8 +8,6 @@ import {
 import { useAppDispatch, useAppSelector } from "../shared/store/hooks";
 import { closeBurgerMenu } from "../shared/store/reducers/BurgerMenuReducer";
 import BurgerMenuItem from "./BurgerMenuItem";
-import "../pages/styles.css";
-
 export default function BurgerMenu() {
   const active = useAppSelector((state) => state.burgerMenu.burgerActive);
 

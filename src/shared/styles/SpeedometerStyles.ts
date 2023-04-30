@@ -47,7 +47,7 @@ export const SpeedometerArrow = styled.div<SpeedometerArrowStyledProps>`
     translateY(${(props) => props.translateY}px);
 `;
 
-export const SpeedometerLevelButton = styled.div<SpeedometerLevelButtonStyledProps>`
+export const SpeedometerButton = styled.div<SpeedometerLevelButtonStyledProps>`
   width: 137px;
   height: 38px;
   background-color: ${(props) => (props.active ? props.color : "transparent")};

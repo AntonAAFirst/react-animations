@@ -1,28 +1,31 @@
 import {
   ISpeedometerArrow,
+  ISpeedometerButtonSetting,
   arrowFirstLevel,
   arrowSecondLevel,
   arrowThirdLevel,
   coordinates,
   firstLevel,
   secondLevel,
-  thiddLevel,
-} from "../shared/models/types";
+  thirdLevel,
+} from "../../shared/models/types";
 import {
   SpeedometerArrow,
   SpeedometerCenter,
   SpeedometerContainer,
   SpeedometerItem,
-  SpeedometerLevelButton,
-} from "../shared/styles/SpeedometerStyles";
+  SpeedometerButton,
+} from "../../shared/styles/SpeedometerStyles";
 import { useState } from "react";
 
 export default function SpeedometerBlock() {
   const [images, setImages] = useState<string[]>(firstLevel);
 
-  const [firstActive, setFirstActive] = useState<boolean>(true);
-  const [secondActive, setSecondActive] = useState<boolean>(false);
-  const [thirdActive, setThirdActive] = useState<boolean>(false);
+  const [buttonsActive, setButtonsActive] = useState<boolean[]>([
+    true,
+    false,
+    false,
+  ]);
 
   const [speedometerCenterColor, setSpeedometerCenterColor] = useState<string>(
     "rgba(122, 11, 192, 1)"
@@ -30,30 +33,43 @@ export default function SpeedometerBlock() {
 
   const [arrow, setArrow] = useState<ISpeedometerArrow>(arrowFirstLevel);
 
+  const buttonsSettings: ISpeedometerButtonSetting[] = [
+    {
+      onClickFunction: setFirst,
+      color: "rgba(122, 11, 192, 1)",
+    },
+    {
+      onClickFunction: setSecond,
+      color: "rgba(11, 138, 192, 1)",
+    },
+    {
+      onClickFunction: setThird,
+      color: "rgba(225, 5, 229, 1)",
+    },
+  ];
+
+  function setActivity(index: number) {
+    setButtonsActive(buttonsActive.map((button, i) => i === index));
+  }
+
   function setFirst() {
-    setFirstActive(true);
-    setSecondActive(false);
-    setThirdActive(false);
+    setActivity(0);
     setImages(firstLevel);
-    setSpeedometerCenterColor("rgba(122, 11, 192, 1)");
+    setSpeedometerCenterColor(buttonsSettings[0].color);
     setArrow(arrowFirstLevel);
   }
 
   function setSecond() {
-    setFirstActive(false);
-    setSecondActive(true);
-    setThirdActive(false);
+    setActivity(1);
     setImages(secondLevel);
-    setSpeedometerCenterColor("rgba(11, 138, 192, 1)");
+    setSpeedometerCenterColor(buttonsSettings[1].color);
     setArrow(arrowSecondLevel);
   }
 
   function setThird() {
-    setFirstActive(false);
-    setSecondActive(false);
-    setThirdActive(true);
-    setImages(thiddLevel);
-    setSpeedometerCenterColor("rgba(225, 5, 229, 1)");
+    setActivity(2);
+    setImages(thirdLevel);
+    setSpeedometerCenterColor(buttonsSettings[2].color);
     setArrow(arrowThirdLevel);
   }
 
@@ -74,25 +90,14 @@ export default function SpeedometerBlock() {
           />
         ))}
       </SpeedometerContainer>
-      <SpeedometerLevelButton
-        onClick={setFirst}
-        active={firstActive}
-        color={"rgba(122, 11, 192, 1)"}
-        index={1}
-      />
-      <SpeedometerLevelButton
-        active={secondActive}
-        onClick={setSecond}
-        color={"rgba(11, 138, 192, 1)"}
-        index={2}
-      />
-
-      <SpeedometerLevelButton
-        active={thirdActive}
-        onClick={setThird}
-        color={"rgba(225, 5, 229, 1)"}
-        index={3}
-      />
+      {buttonsSettings.map((button, index) => (
+        <SpeedometerButton
+          onClick={() => button.onClickFunction()}
+          active={buttonsActive[index]}
+          color={button.color}
+          index={index + 1}
+        />
+      ))}
     </>
   );
 }
