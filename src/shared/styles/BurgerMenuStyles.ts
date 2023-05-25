@@ -16,8 +16,8 @@ export const BurgerMenuPanel = styled.div<BurgerMenuStyledProps>`
   top: 0;
   z-index: 10200;
   transition: 1s;
-  background-color: rgba(9, 9, 9, 1);
   transform: translateX(${(props) => (props.active ? 0 : "-400px")});
+  background-color: rgba(9, 9, 9, 1);
 `;
 
 export const BurgerMenuPhoneNumber = styled.div<BurgerMenuStyledProps>`
